@@ -39,3 +39,13 @@ module.exports.getLinkUrl = function getLinkUrl(currentUrl,element){
     }
     return link;
 }
+
+module.exports.getPageLinks = function getPageLinks(currentUrl,body){
+    return [].slice.call(cheerio.load(body)('a'))
+        .map(function(element){
+            return module.exports.getLinkUrl(currentUrl,element);
+        })
+        .filter(function(element){
+            return !!element;
+        })
+}
