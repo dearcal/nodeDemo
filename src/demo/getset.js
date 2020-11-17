@@ -14,3 +14,5 @@ const person = {
 console.log(person.fullname);
 console.log(person.fullname = 'alex wang');
 console.log(person.name);
+
+module.exports = person;

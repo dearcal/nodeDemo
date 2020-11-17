@@ -43,6 +43,8 @@ Kitten.find(function(err,kittens){
 })
 
 //
-
+const adminSchima = new mongoose.Schema({
+    
+})
 
 
